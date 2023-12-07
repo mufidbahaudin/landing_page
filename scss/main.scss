@@ -1,12 +1,12 @@
 // font
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
 // variables
-$primaryColor:#7872C0;
-$secondaryColor:#473D9E;
+$primaryColor: #7872C0;
+$secondaryColor: #473D9E;
 $tertiaryColor: #F2566E;
 $textColor: #232630;
+$bgColor: #FFF5EE;
 
 // mixin 
 @mixin buttono {
@@ -18,22 +18,45 @@ $textColor: #232630;
     text-decoration: none;
 }
 
+// keyframes
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px); // Optional: You can add a slight vertical translation
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 // styles
 body {
-        font-family: 'Poppins', sans-serif;
-        background-image: url(../img/gambar.png);
-        background-size: 90vmax;
-        background-position: top right;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-    
-        @media screen and (max-width: 992px) {
-            background-size: 50vmax;
-        }
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/gambar.png);
+    background-color: $bgColor;
+    background-size: 90vmax;
+    background-position: top right;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+    @media screen and (max-width: 992px) {
+        background-size: 50vmax;
     }
+}
 
 // navbar
 .custom-nav {
+    animation: fadeInNav 1.5s ease-in-out;
     .navbar-brand {
         img {
             width: 30px;
@@ -76,6 +99,7 @@ body {
 // custom-section
 .custom-section {
     margin-top: 10em;
+    animation: fadeInContent 1.5s ease-in-out;
     h2 {
         font-weight: 600;
         font-size: 4rem;

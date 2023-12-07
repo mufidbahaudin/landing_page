@@ -1,7 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   background-image: url(../img/gambar.png);
+  background-color: #FFF5EE;
   background-size: 90vmax;
   background-position: top right;
   background-repeat: no-repeat;
@@ -13,6 +32,9 @@ body {
   }
 }
 
+.custom-nav {
+  animation: fadeInNav 1.5s ease-in-out;
+}
 .custom-nav .navbar-brand img {
   width: 30px;
   height: 30px;
@@ -49,6 +71,7 @@ body {
 
 .custom-section {
   margin-top: 10em;
+  animation: fadeInContent 1.5s ease-in-out;
 }
 .custom-section h2 {
   font-weight: 600;
