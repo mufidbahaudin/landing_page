@@ -1,0 +1,129 @@
+// font
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+
+// variables
+$primaryColor:#7872C0;
+$secondaryColor:#473D9E;
+$tertiaryColor: #F2566E;
+$textColor: #232630;
+
+// mixin 
+@mixin buttono {
+    display: inline-block;
+    color: white;
+    background-color: $primaryColor;
+    border-radius: 1.8em;
+    padding: .5em 2em;
+    text-decoration: none;
+}
+
+// styles
+body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url(../img/gambar.png);
+        background-size: 90vmax;
+        background-position: top right;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    
+        @media screen and (max-width: 992px) {
+            background-size: 50vmax;
+        }
+    }
+
+// navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 30px;
+            height: 30px;
+            margin-top: -4px;
+            
+        }
+        span {
+            color: $primaryColor;
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-left: 0.5em;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item{
+                .nav-link {
+                    color: $primaryColor;
+                    font-weight: 500;
+                    margin-left: 2.5em;
+                    transition: .3s color ease;
+
+                    &:hover {
+                        color: darken($primaryColor, 40%);
+                    }
+                }
+                .sign-up-button {
+                    @include buttono;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: -1em;
+    }
+}
+
+// custom-section
+.custom-section {
+    margin-top: 10em;
+    h2 {
+        font-weight: 600;
+        font-size: 4rem;
+        color: $primaryColor;
+        line-height: 1;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 3rem;
+        color: $secondaryColor;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    p {
+        color: $textColor;
+        font-size: 1.1rem;
+        margin-top: 1.8em;
+    }
+
+    a {
+        margin-top: 1em;
+        @include buttono;
+        border: 1px solid transparent;
+        transition: .3s ease;
+
+        &:hover {
+            color: $primaryColor;
+            border: 1px solid $primaryColor;
+            background-color: transparent;
+        } 
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: 3em;
+        text-align: center;
+        h2, h3, p {
+            text-shadow: 1px 1px 1px rgba($color: $textColor, $alpha: 0.4);
+        }
+        h3 {
+            color: lighten($textColor, 10);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) { 
+    .container {
+        margin-top: 18rem;
+    }
+}

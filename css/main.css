@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../img/gambar.png);
+  background-size: 90vmax;
+  background-position: top right;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+@media screen and (max-width: 992px) {
+  body {
+    background-size: 50vmax;
+  }
+}
+
+.custom-nav .navbar-brand img {
+  width: 30px;
+  height: 30px;
+  margin-top: -4px;
+}
+.custom-nav .navbar-brand span {
+  color: #7872C0;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-left: 0.5em;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #7872C0;
+  font-weight: 500;
+  margin-left: 2.5em;
+  transition: 0.3s color ease;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #232047;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  display: inline-block;
+  color: white;
+  background-color: #7872C0;
+  border-radius: 1.8em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -1em;
+  }
+}
+
+.custom-section {
+  margin-top: 10em;
+}
+.custom-section h2 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: #7872C0;
+  line-height: 1;
+}
+.custom-section h3 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #473D9E;
+  white-space: nowrap;
+  line-height: 1;
+}
+.custom-section p {
+  color: #232630;
+  font-size: 1.1rem;
+  margin-top: 1.8em;
+}
+.custom-section a {
+  margin-top: 1em;
+  display: inline-block;
+  color: white;
+  background-color: #7872C0;
+  border-radius: 1.8em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.custom-section a:hover {
+  color: #7872C0;
+  border: 1px solid #7872C0;
+  background-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .custom-section h2, .custom-section h3, .custom-section p {
+    text-shadow: 1px 1px 1px rgba(35, 38, 48, 0.4);
+  }
+  .custom-section h3 {
+    color: #393d4d;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin-top: 18rem;
+  }
+}/*# sourceMappingURL=main.css.map */
